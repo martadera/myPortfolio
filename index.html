@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400" rel="stylesheet">
+    <style>
+        *,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+
+        ul {
+
+            background-color: rgba(20, 22, 13, 0.8);
+            padding-top: 60px;
+            text-align: center;
+            list-style: none;
+            position: relative;
+            width: 100%;
+            display: none;
+
+        }
+
+        .navigation {
+            width: 100%;
+            height: 100%;
+        }
+
+        nav li {
+            padding: 10px;
+            width: 100%;
+
+        }
+
+        section.first {
+            width: 100%;
+            height: 100vh;
+            background-image: url(graphics/front.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        article {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .firstsection-h1,
+        .firstsection-h2 {
+            text-align: center;
+            color: white;
+            position: absolute;
+            background-color: rgba(20, 22, 13, 0.4);
+            max-width: 100%;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            padding: 10px;
+        }
+
+        .firstsection-h1 {
+            top: 20%;
+
+        }
+
+        .firstsection-h2 {
+            top: 44%;
+
+
+        }
+
+        .firstsection-h2 span {
+            color: #7be9f3;
+            font-size: 2.8rem;
+        }
+
+        .navigation li a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 2px;
+            font-size: 2.0rem;
+        }
+
+        nav.navigation>ul>li>a:hover {
+            transform: scale(1.2);
+        }
+
+        .burger i {
+            position: absolute;
+            font-size: 2.2rem;
+            right: 12.75px;
+            top: 12.75px;
+        }
+
+        .burger {
+            position: absolute;
+            height: 4.5rem;
+            width: 4.5rem;
+            right: 20px;
+            top: 20px;
+            color: white;
+            font-size: 50px;
+            display: block;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        i.fa {
+            display: none;
+        }
+
+
+        .contact {
+            display: flex;
+            justify-content: center;
+        }
+
+        .fab {
+            width: 100%;
+            font-size: 2rem;
+            padding: 10px;
+
+        }
+
+        li:last-child a {
+            border-top: 2px solid pink;
+        }
+
+
+
+        .active {
+            display: block;
+
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        article.second {
+            width: 90%;
+            margin: 0 auto;
+
+        }
+
+        h3 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin: 20px auto;
+            padding: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #777;
+            font-weight: 700;
+        }
+
+        .about,
+        .skills {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            line-height: 30px;
+
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: gray;
+
+        }
+
+        .about img,
+        .skills img {
+            height: 120px;
+            width: 120px;
+            margin: 10px auto 30px auto;
+            border-radius: 50%;
+
+        }
+
+        section.contact {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            width: 100%;
+            min-height: 200px;
+
+        }
+
+        .contact-h2 {
+            color: white;
+            font-size: 1.6rem;
+            flex-basis: 25%;
+            font-weight: 100;
+            margin: auto auto;
+            text-align: center;
+
+        }
+
+        .contact-div {
+            width: 100%;
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 100;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            width: 100%;
+            min-height: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        h2>a>i {
+            color: #7be9f3;
+            font-size: 1.8rem;
+        }
+
+        iframe {
+            width: 400px;
+            height: 300px;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            margin-right: 40px;
+            display: none;
+        }
+
+
+
+        @media (min-width:780px) {
+            .burger {
+                display: none;
+            }
+            ul {
+                background-color: rgba(20, 22, 13, 0.4);
+                padding-top: 60px;
+                text-align: center;
+                list-style: none;
+                width: 18%;
+                display: block;
+                height: 100vh;
+
+            }
+            ul li a {
+                padding: 10px 10px;
+            }
+            .navigation ul .contact {
+                display: flex;
+                flex-direction: column;
+            }
+            .firstsection-h1,
+            .firstsection-h2 {
+                padding: 20px;
+                left: -150%;
+                animation: titles 10s ease infinite;
+            }
+
+            .firstsection-h2 {
+                animation: titles 10s 0.5s ease infinite;
+            }
+            nav li:last-child {
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+            }
+            .about,
+            .skills {
+                width: 90%;
+                margin: 10px auto;
+                display: flex;
+                text-align: center;
+                flex-direction: row;
+                line-height: 45px;
+                padding-top: 50px;
+
+            }
+
+            article.three {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 80%;
+                margin: 0 auto;
+
+            }
+            .three div.skills {
+                width: 50%;
+                flex-grow: 1;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
+                margin: 0 auto;
+
+            }
+            .about img,
+            .skills.img {
+                order: 1;
+                width: 150px;
+                height: 150px;
+                margin: auto 10px auto 50px;
+
+            }
+            .contact-div {
+                background-color: rgba(0, 0, 0, 0.5);
+                flex-direction: row;
+            }
+            iframe {
+                display: block;
+            }
+
+            @keyframes titles {
+                0% {
+                    left: -200%
+                }
+                50% {
+                    left: 20%;
+                }
+                90% {
+
+                    left: 20%;
+                }
+                100% {
+                    left: -200%
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="first">
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <div class="contact"><a href="https://www.linkedin.com/in/marta-dera-3a3381a0/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/martadera"><i class="fab fa-github"></i></a></div>
+                </li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars active"></i>
+                <i class="fas fa-times hidden"></i>
+            </div>
+        </nav>
+        <h1 class="firstsection-h1">Welcome to my personal site!</h1>
+        <h2 class="firstsection-h2">My name is <span>Marta</span> and I am <span>Front-end developer.</span></h2>
+    </section>
+
+
+    <article class="second">
+        <h3>About me</h3>
+        <div class=about>
+            <img src="graphics/id.jpg" alt="ID photo">
+            <p class="paragraph paragraph-about">My name is Marta and I am interested in Front-end Development. I have financial experience as an analyst in international corporation. For the last couple of months I have been learning HTML, CSS, Javascript, jQuery etc. It gives me a lot of satisfaction and every day I learn something new. I would like to develop myself ,improve my analytical skills, learn new things and later find a job and gain experience in this area. I have analytical skills, I pay attention to details, I learn quickly, I can easily work as an individual and in the team. I am responsible person and I like challenges as they are the best motivators. Currently I am looking for my first job/internship in this field. Feel free to contact me.</p>
+        </div>
+    </article>
+    <h3>Skills</h3>
+    <article class="three">
+
+        <div class=skills>
+            <img src="graphics/html5.png" alt="html logo">
+            <p class="paragraph paragraph-skills">I use HyperText Markup Language to create websites and web applications.</p>
+        </div>
+        <div class=skills>
+            <img src="graphics/css.png" alt="css logo">
+            <p class="paragraph paragraph-skills">To make my websites look amazing and to create design I use Cascading Style Sheets.</p>
+        </div>
+        <div class=skills>
+            <img src="graphics/js.jpg" alt="js logo">
+            <p class="paragraph paragraph-skills">To program the behavior of web pages I write my code in JavaScript.</p>
+        </div>
+        <div class=skills>
+            <img src="graphics/jQuery.png" alt="jQuery logo">
+            <p class="paragraph paragraph-skills">I use JavaScript Library to simplify JavaScript programming.</p>
+        </div>
+        <div class=skills>
+            <img src="graphics/sass.png" alt="sass logo">
+            <p class="paragraph paragraph-skills">To make my work more effective and code more re-usable I use Sass.</p>
+        </div>
+        <div class=skills>
+            <img src="graphics/git.png" alt="git logo">
+            <p class="paragraph paragraph-skills">To update and publish my projects in GitHub I use Git.</p>
+        </div>
+
+    </article>
+
+    <h3>Contact</h3>
+    <section class="contact">
+        <div class="contact-div">
+            <h2 class="contact-h2">Visit my profile on <a href="https://www.linkedin.com/in/marta-dera-3a3381a0/"><i class="fab fa-linkedin-in"></i></a></h2>
+            <h2 class="contact-h2">See my projects on<a href="https://github.com/martadera"><i class="fab fa-github"></i></a></h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27647.240164142484!2d20.984403094932283!3d52.23077929564478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8d65233559%3A0xeb0bc9f267c74ed9!2sWarszawa+Centralna!5e0!3m2!1spl!2spl!4v1522068295296" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer>
+
+        <h4>&copy;2018. Created by Marta Dera</h4>
+    </footer>
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    var bar = document.querySelector(".fa-bars");
+    var close = document.querySelector(".fa-times");
+    var menuList = document.querySelector("ul");
+    var h1 = document.querySelector("section h1");
+    var h2 = document.querySelector("section h2");
+    var divBurger = document.querySelector(".burger");
+    var color = divBurger.style.backgroundColor;
+    var about = document.querySelector("article.second");
+    var nav1 = document.querySelector("a:nth-child(1)");
+    var three = document.querySelector("article.three");
+    var nav2 = document.querySelector("li:nth-child(2)>a");
+
+    bar.addEventListener("click", function() {
+        close.classList.toggle("hidden");
+        bar.classList.toggle("hidden");
+        menuList.classList.toggle("active");
+        h1.classList.toggle("hidden");
+        h2.classList.toggle("hidden");
+        divBurger.style.backgroundColor = "inherit";
+
+    });
+
+    close.addEventListener("click", function() {
+        close.classList.toggle("hidden");
+        bar.classList.toggle("hidden");
+        menuList.classList.toggle("active");
+        h1.classList.toggle("hidden");
+        h2.classList.toggle("hidden");
+        divBurger.style.backgroundColor = "black";
+    });
+
+    nav1.addEventListener("click", function() {
+        $("body, html").animate({
+            scrollTop: about.offsetTop - 20
+        }, 500);
+        close.classList.toggle("hidden");
+        bar.classList.toggle("hidden");
+        menuList.classList.toggle("active");
+        divBurger.style.backgroundColor = "black";
+        h1.classList.toggle("hidden");
+        h2.classList.toggle("hidden");
+
+    });
+
+    nav2.addEventListener("click", function() {
+        $("body, html").animate({
+            scrollTop: three.offsetTop - 128
+        }, 500);
+        close.classList.toggle("hidden");
+        bar.classList.toggle("hidden");
+        menuList.classList.toggle("active");
+        divBurger.style.backgroundColor = "black";
+        h1.classList.toggle("hidden");
+        h2.classList.toggle("hidden");
+    })
+</script>
+
+</html>
